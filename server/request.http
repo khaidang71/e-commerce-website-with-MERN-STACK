@@ -1,0 +1,87 @@
+POST  http://localhost:3000/account/login
+Content-Type: application/json
+
+{
+    "email": "khai@gmail.com",
+    "password": "dang"
+}
+###
+POST  http://localhost:5000/api/users/signin
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "1234"
+}
+###
+PUT  http://localhost:5000/api/users/profile
+Content-Type: application/json
+
+{
+    "name": "admin1",
+    "email": "admin@gmail.com",
+    "password": "1234"
+}
+###
+POST  http://localhost:3000/account/register
+Content-Type: application/json
+
+{
+"email": "khai@gmail.com",
+"password": "dang"
+}
+###
+POST  http://localhost:3000/account/register
+Content-Type: application/json
+
+{
+"email": "dang@gmail.com",
+"password": "dang",
+"isAdmin": true
+}
+### 
+POST  http://localhost:3000/ecommerce/inventory
+Content-Type: application/json
+
+{
+    "product": "633439c75871ccc49a291a80",
+    "quantity": 1000,
+    "resvervations": []
+
+}
+
+###
+PUT  http://localhost:3000/ecommerce/cart
+Content-Type: application/json
+Accountization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlZjQwNGJiNzA1MGEwMTVmMDZiZGMiLCJpYXQiOjE2NjU2NzM3NjF9.eX6WqjQYIgR0-QoApqmTxiXv-hoUh4ecctYQlW-LVxk
+
+{
+    "product": "633439c75871ccc49a291a80",
+    "quantity": 1
+
+}
+###
+GET  http://localhost:3000/ecommerce/cart
+Content-Type: application/json
+Accountization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlZjQwNGJiNzA1MGEwMTVmMDZiZGMiLCJpYXQiOjE2NjU2NzM3NjF9.eX6WqjQYIgR0-QoApqmTxiXv-hoUh4ecctYQlW-LVxk
+
+###
+PUT   http://localhost:3000/ecommerce/gRNote
+Content-Type: application/json
+
+{
+    "supplier": "6340301a256b896a2988b916",
+
+    "products": [
+        {
+            "product": "633439c75871ccc49a291a80",
+            "quantity": 2000,
+            "price": 20000
+        }
+    ],
+
+    "totail":20000000
+
+
+}
+

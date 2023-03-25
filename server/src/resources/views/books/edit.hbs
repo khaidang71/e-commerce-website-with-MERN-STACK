@@ -1,0 +1,31 @@
+<div class="mt-4">
+    <h3>Sửa sản phẩm</h3>
+        <div class="container-fluid mt-3">
+            <form method="POST" action="/books/{{book._id}}?_method=PUT">
+
+                <div class="form-group">
+                    <label for="title">title</label>
+                    <input type="text" value="{{book.title}}" id="title" class="form-control"  name="title">
+                </div>
+
+                <div class="form-group">
+                    <label for="publisher">publisher</label>
+                    <input type="text"value="{{book.publisher}}" id="publisher" class="form-control"  name="publisher">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">description</label>
+                    <textarea id="description"class="form-control"  name="description"> {{book.description}}</textarea>
+                </div>
+
+                {{!-- <div class="form-group">
+                    <label for="img">image</label>
+                    <input type="text"value="{{book.img}}" id="img"class="form-control" placeholder="img" name="img">
+                </div> --}}
+
+                <button type="submit" class="btn btn-primary">Lưu</button>
+
+            </form>
+
+        </div>
+</div>
